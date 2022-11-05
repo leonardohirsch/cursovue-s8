@@ -56,8 +56,8 @@ watch([userEmail,userPass], ([newUserEmail, newUserPass]) => {
         <div v-if="loginWarnSpan!=''">
           <span>{{loginWarnSpan}}</span>
         </div>
-        <div v-if="btnSubmitActive" class="form-row">
-          <button type="submit">Entrar!</button>
+        <div class="form-row">
+          <button type="submit" :disabled="btnSubmitActive===false">Entrar!</button>
         </div>
       </div>
     </form>

@@ -78,8 +78,8 @@ watch([userName, userEmail,userPass], ([newUserName, newUserEmail, newUserPass])
           <input type="password" v-model.trim="userPass" placeholder="Password" required>
           <span v-if="passWarnSpan!=''">{{passWarnSpan}}</span>
         </div>
-        <div v-if="btnSubmitActive" class="form-row">
-          <button type="submit">Registrarse!</button>
+        <div class="form-row">
+          <button type="submit" :disabled="btnSubmitActive===false">Registrarse!</button>
         </div>
       </div>
     </form>
